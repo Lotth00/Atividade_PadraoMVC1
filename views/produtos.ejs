@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <title>Produtos</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <main class="conteudo-principal">
+        <h1>Gerenciamento de Produtos</h1>
+
+        <form action="/produtos" method="POST" style="margin-bottom: 30px;">
+            <input type="text" name="nome" class="campo-texto" placeholder="Nome do Produto" required>
+            <input type="text" name="preco" class="campo-texto" placeholder="Preço" required>
+            <button type="submit" class="botao-acao botao-verde">Cadastrar</button>
+        </form>
+
+        <table class="tabela-produtos">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% produtos.forEach(p => { %>
+                <tr>
+                    <td><%= p.id %></td>
+                    <td><%= p.nome %></td>
+                    <td>R$ <%= p.preco %></td>
+                    <td><a href="/produtos/deletar/<%= p.id %>" class="botao-vermelho">Excluir</a></td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
