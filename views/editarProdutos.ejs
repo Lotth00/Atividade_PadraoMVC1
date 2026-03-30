@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <title>Editar Produto</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <main class="conteudo-principal">
+        <h1>Editar Produto</h1>
+        <p>Altere as informações abaixo e clique em Salvar.</p>
+
+        <form action="/produtos/editar/<%= produto.id %>" method="POST">
+            <div class="grupo-formulario">
+                <label>Nome do Produto:</label>
+                <input type="text" name="nome" class="campo-texto" value="<%= produto.nome %>" required>
+            </div>
+            <div class="grupo-formulario">
+                <label>Preço:</label>
+                <input type="text" name="preco" class="campo-texto" value="<%= produto.preco %>" required>
+            </div>
+            <br>
+            <button type="submit" class="botao-acao botao-verde">Salvar Alterações</button>
+            <a href="/produtos" style="margin-left: 10px;">Cancelar</a>
+        </form>
+    </main>
+</body>
+</html>

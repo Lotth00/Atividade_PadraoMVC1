@@ -31,7 +31,10 @@
                     <td><%= p.id %></td>
                     <td><%= p.nome %></td>
                     <td>R$ <%= p.preco %></td>
-                    <td><a href="/produtos/deletar/<%= p.id %>" class="botao-vermelho">Excluir</a></td>
+                    <td>
+                    <a href="/produtos/editar/<%= p.id %>" class="botao-editar">Editar</a>
+                    <a href="/produtos/deletar/<%= p.id %>" class="botao-vermelho">Excluir</a>
+                </td>
                 </tr>
                 <% }) %>
             </tbody>

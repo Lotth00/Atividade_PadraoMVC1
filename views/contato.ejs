@@ -8,10 +8,28 @@
 <body>
     <%- include('partials/header') %>
     <main class="conteudo-principal">
-        <h1>Contato</h1>
-        <form>
-            <input type="text" class="campo-texto" placeholder="Seu Nome">
-            <button type="button" class="botao-acao botao-verde">Enviar</button>
+        <h1>Fale Conosco</h1>
+        <p>Tem alguma dúvida? Mande uma mensagem para nossa equipe.</p>
+        
+        <form class="formulario-contato">
+            <div class="grupo-formulario">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" class="campo-texto" placeholder="Ex: João da Silva">
+            </div>
+
+            <div class="grupo-formulario">
+                <label for="email">E-mail de Contato:</label>
+                <input type="email" id="email" class="campo-texto" placeholder="seu@email.com">
+            </div>
+
+            <div class="grupo-formulario">
+                <label for="mensagem">Sua Mensagem:</label>
+                <textarea id="mensagem" class="campo-texto" rows="4" placeholder="Como podemos ajudar?"></textarea>
+            </div>
+
+            <button type="button" class="botao-acao botao-verde" onclick="alert('Mensagem enviada com sucesso!')">
+                Enviar Mensagem
+            </button>
         </form>
     </main>
 </body>

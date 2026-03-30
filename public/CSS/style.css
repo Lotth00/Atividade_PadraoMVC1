@@ -1,8 +1,8 @@
 :root {
   --cor-fundo: #f8f9fa;
-  --cor-primaria: #2c3e50; /* Azul escuro chic */
-  --cor-destaque: #27ae60; /* Verde sucesso */
-  --cor-perigo: #e74c3c;   /* Vermelho erro */
+  --cor-primaria: #510077; 
+  --cor-destaque: #b371b3; 
+  --cor-perigo: #e74c3c;
   --cor-texto: #333;
   --branco: #ffffff;
 }
@@ -15,7 +15,7 @@ body {
   padding: 0;
 }
 
-/* O HEADER (Cabeçalho) */
+/* O HEADER */
 .cabecalho-principal {
   background-color: var(--cor-primaria);
   padding: 1rem 2rem;
@@ -81,5 +81,53 @@ body {
   font-weight: bold;
 }
 
-.botao-verde { background-color: var(--cor-destaque); color: white; }
-.botao-vermelho { background-color: var(--cor-perigo); color: white; text-decoration: none; font-size: 12px; padding: 5px 10px; }
+.botao-verde { 
+  background-color: var(--cor-destaque); 
+  color: white; 
+}
+.botao-vermelho { 
+  background-color: var(--cor-perigo); 
+  color: white; text-decoration: none; 
+  font-size: 12px; 
+  padding: 5px 10px; 
+}
+
+.botao-editar {
+  background-color: #e07fcb; 
+  color: black; 
+  text-decoration: none; 
+  padding: 5px 10px; 
+  font-size: 12px; 
+  font-weight: normal;
+}
+
+.formulario-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;          
+  max-width: 500px;    
+  margin-top: 20px;
+}
+
+.grupo-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.grupo-formulario label {
+  font-weight: bold;
+  font-size: 14px;
+  color: var(--cor-primaria);
+}
+
+.formulario-contato .campo-texto {
+  margin-right: 0; 
+  width: 100%;
+  box-sizing: border-box; 
+}
+
+textarea.campo-texto {
+  resize: vertical; 
+  font-family: inherit;
+}

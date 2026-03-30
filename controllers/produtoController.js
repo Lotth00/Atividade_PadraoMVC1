@@ -9,6 +9,11 @@ exports.listarProdutos = (req, res) => {
     res.render('produtos', { produtos });
 };
 
+ // Listar produtos para home
+exports.getHome = (req, res) => {
+    res.render('home', { produtos }); 
+};
+
 // Criar produto
 exports.criarProduto = (req, res) => {
     let ultimoId = 0;
@@ -36,3 +41,23 @@ exports.deletarProduto = (req, res) => {
     produtos = produtos.filter(p => p.id != id); // Remove da lista
     res.redirect('/produtos');
 };
+
+// Editar produto
+exports.getEditarProduto = (req, res) => {
+    const id = req.params.id;
+    const produto = produtos.find(p => p.id == id);
+    res.render('editarProdutos', { produto });
+};
+
+// Salvar edição
+exports.postEditarProduto = (req, res) => {
+    const id = req.params.id;
+    const indice = produtos.findIndex(p => p.id == id);
+
+    if (indice !== -1) {
+        produtos[indice].nome = req.body.nome;
+        produtos[indice].preco = req.body.preco;
+    }
+    res.redirect('/produtos');
+};
+

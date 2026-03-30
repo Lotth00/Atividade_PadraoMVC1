@@ -10,6 +10,30 @@
     <main class="conteudo-principal">
         <h1>Página Inicial</h1>
         <p>Bem-vindo ao nosso sistema estruturado em MVC! Use o menu acima para navegar.</p>
+
+        <hr> <h3>Nossos Produtos em Destaque</h3>
+        
+        <% if (produtos.length > 0) { %>
+            <table class="tabela-produtos">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% produtos.forEach(p => { %>
+                    <tr>
+                        <td><%= p.nome %></td>
+                        <td>R$ <%= p.preco %></td>
+                    </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        <% } else { %>
+            <p>Ainda não temos produtos cadastrados no estoque.</p>
+        <% } %>
+        
     </main>
 </body>
 </html>
