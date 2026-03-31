@@ -3,11 +3,11 @@ const path = require('path');
 const app = express();
 const routes = require('./routes/index');
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'))); //diz pra meu servidor onde ta meu css (se não ter ele não acha)
 
-app.set('view engine', 'ejs');
+app.set('view engine', 'ejs'); // diz que to usando  o EJS inves do html normal
 app.set('views', path.join(__dirname, 'views'));
-app.use(express.urlencoded({ extended: true })); 
+app.use(express.urlencoded({ extended: true })); //para ler dados do formulário (se não tiver ele não lê os dados do formulário)
 
 app.use('/', routes);
 
