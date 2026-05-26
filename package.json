@@ -20,6 +20,7 @@
   "homepage": "https://github.com/Lotth00/Atividade_Padr-oMVC1#readme",
   "dependencies": {
     "ejs": "^5.0.1",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "express-session": "^1.19.0"
   }
 }

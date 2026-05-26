@@ -12,3 +12,4 @@ router.get('/produtos/editar/:id', controller.getEditarProduto);
 router.post('/produtos/editar/:id', controller.postEditarProduto);
 
 module.exports = router;
+
