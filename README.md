@@ -117,5 +117,5 @@ Preencha com as credenciais abaixo e clique em "Entrar".
 
 Desenvolvido como atividade acadêmica para disciplina de Desenvolvimento Web.
 
-GitHub: [Lotth00](https://github.com/Lotth00)
-```
+```GitHub: [Lotth00](https://github.com/Lotth00)```
+
