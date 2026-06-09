@@ -45,6 +45,7 @@ Aplicação web para gerenciamento de produtos com autenticação de usuários, 
 ### Autenticação (rotas públicas)
 
  `GET /login` -> Exibe o formulário de login 
+ 
  `POST /login` -> Envia e-mail e senha para autenticação 
 
 **Exemplo de uso no navegador:**  
@@ -54,8 +55,11 @@ Preencha com as credenciais abaixo e clique em "Entrar".
 ### Usuários (apenas admin)
 
 `GET /usuarios` -> Lista todos os usuários cadastrados
+
 `GET /criar-usuario` -> Exibe formulário para criar novo usuário 
+
 `POST /criar-usuario` -> Cadastra um novo usuário 
+
 `POST /deletar-usuario/:id` -> Remove um usuário 
 
 **Acesso restrito:** apenas usuários com `isAdmin = true`
@@ -64,16 +68,23 @@ Preencha com as credenciais abaixo e clique em "Entrar".
 
 
 `GET /produtos` -> Lista todos os produtos 
+
 `GET /criar-produto` -> Exibe formulário de criação de produto 
+
 `POST /criar-produto` -> Cadastra um novo produto 
+
 `GET /editar-produto/:id` -> Exibe formulário de edição 
+
 `POST /editar-produto/:id` -> Atualiza os dados do produto 
+
 `POST /deletar-produto/:id` -> Remove um produto 
 
 ### Páginas estáticas
 
 `GET /`-> Página inicial (home) 
+
 `GET /sobre` -> Página institucional
+
 `GET /contato` -> Página de contato 
 
 ### Exemplo prático
